@@ -5,7 +5,35 @@
       "name": "Fernando Luckesi",
       "email": "fernando.luckesi94@gmail.com",
       "password": "1234",
-      "token": "token-123"
+      "token": "IP21HIr9gxMAZdLHKUeHb83gZTHqTZhy"
+    },
+    {
+      "id": 1,
+      "name": "Bruce Wayne",
+      "email": "bruce.wayne@gmail.com",
+      "password": "bat123",
+      "token": "OXonEcXVACu9ei1Er2I7UAX6qTO0qNCc"
+    },
+    {
+      "id": 2,
+      "name": "Dick Grayson",
+      "email": "dick.grayson@gmail.com",
+      "password": "robin456",
+      "token": ""
+    },
+    {
+      "id": 3,
+      "name": "Selina Kyle",
+      "email": "selina.kyle@gmail.com",
+      "password": "catwoman789",
+      "token": ""
+    },
+    {
+      "id": 4,
+      "name": "Jack Napier",
+      "email": "jack.napier@gmail.com",
+      "password": "joker10",
+      "token": ""
     }
   ]
 }

@@ -16,6 +16,7 @@ import { ToggleSwitch } from "../../components/ToggleSwitch";
 import { useNavigate } from "react-router-dom";
 import { api, getUser } from "../../services/api";
 import Cookies from "js-cookie";
+import { generateRandomToken } from "../../utils/generateRandomToken";
 
 export const Login: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +25,6 @@ export const Login: React.FC = () => {
   const [emailChangedAfterBlur, setEmailChangedAfterBlur] = useState(false);
   const [passwordError, setPasswordError] = useState("");
   const [loginErrorMessage, setLoginErrorMessage] = useState("");
-
   const [buttonSubmitDisabled, setButtonSubmitDisabled] = useState(true);
   const [saveLoginChecked, setSaveLoginChecked] = useState(false);
 
@@ -65,29 +65,37 @@ export const Login: React.FC = () => {
 
   const navigate = useNavigate();
 
+  const handleSaveLoginChecked = () => {
+    setSaveLoginChecked(!saveLoginChecked);
+  };
+
   const handleOnClickLogin = async (event: React.MouseEvent) => {
     event.preventDefault();
     try {
       const user = await getUser(email, password);
       if (user) {
         setLoginErrorMessage("");
-        const token = "token-123";
+
+        const token: string = generateRandomToken(32);
+
         await api.patch(`/users/${user.id}`, { token });
-        Cookies.set("token", token, { expires: 1 / 24 });
-        //navigate("/home");
+
+        if (saveLoginChecked) {
+          const expirationDate = new Date("9999-12-31T23:59:59");
+          Cookies.set("token", token, { expires: expirationDate });
+        } else {
+          Cookies.set("token", token, { expires: 0 });
+        }
+
+        navigate("/home");
       } else {
         setLoginErrorMessage("Seu e-mail ou senha estão incorretos");
         console.error("Credenciais inválidas");
       }
     } catch (error) {
+      setLoginErrorMessage("Erro inesperado. Tente novamente");
       console.error("Erro ao fazer login:", error);
     }
-
-    //navigate("/home");
-  };
-
-  const handleSaveLoginChecked = () => {
-    setSaveLoginChecked(!saveLoginChecked);
   };
 
   return (
@@ -99,6 +107,7 @@ export const Login: React.FC = () => {
             <InputForm
               placeholder="E-MAIL"
               type="email"
+              value={email}
               onChange={(e) => handleChangeValueInput("email", e.target.value)}
               onBlur={(e) => validateEmail(e.target.value)}
             />
@@ -108,6 +117,7 @@ export const Login: React.FC = () => {
             <InputForm
               placeholder="SENHA"
               type="password"
+              value={password}
               onChange={(e) =>
                 handleChangeValueInput("password", e.target.value)
               }

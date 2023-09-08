@@ -36,6 +36,10 @@ export const InputFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
 `;
 
 export const InputForm = styled.input`
