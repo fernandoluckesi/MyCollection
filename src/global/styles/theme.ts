@@ -1,9 +1,15 @@
 export const theme = {
   colors: {
-    primary: "#007bff",
+    primary: "#00FFA3",
     secondary: "#6c757d",
-    background: "#f8f9fa",
-    text: "#333",
+    background: "#2B3C51",
+    textLight: "#FFFFFF",
+    textDark: "#000000",
+    shapeLight: "#FFFFFF",
+    shapeDark: "#223041",
+    inative: "#3D5470",
+    alert: "#EC6868",
+    gray: "#F4F4F4",
   },
   fontFamily: "Inter, sans-serif",
 };
