@@ -19,7 +19,7 @@ export const SearchInputContainer = styled.div`
     outline: 2px solid ${({ theme }) => theme.colors.primary};
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 1100px) {
     display: none;
   }
 `;

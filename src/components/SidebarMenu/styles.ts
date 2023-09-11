@@ -56,7 +56,7 @@ export const MainContainer = styled.div<SidebarMenuStylesProps>`
   top: 0;
   width: 329px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     animation: ${({ showSidebar }) =>
         showSidebar ? slideInMobile : slideOutMobile}
       0.5s;
@@ -100,20 +100,20 @@ export const Header = styled.div`
   justify-content: flex-end;
   padding: 0 24px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     height: fit-content;
     padding: 24px;
   }
 `;
 
 export const IoIosArrowBackStyle = styled(IoIosArrowBack)`
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;
 
 export const AiOutlineCloseStyle = styled(AiOutlineClose)`
-  @media (min-width: 800px) {
+  @media (min-width: 1100px) {
     display: none;
   }
 `;
@@ -138,7 +138,7 @@ export const SearchInputContainer = styled.div`
     outline: 2px solid ${({ theme }) => theme.colors.primary};
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;

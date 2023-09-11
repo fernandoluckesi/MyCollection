@@ -6,12 +6,12 @@ interface MainTemplateStylesProps {
 
 export const MainContainer = styled.div<MainTemplateStylesProps>`
   background-color: ${({ theme }) => theme.colors.background};
-  height: 100vh;
+  min-height: 100vh;
   padding-left: ${({ showSidebar }) => (showSidebar ? "329px" : "0px")};
   position: relative;
   transition: 0.5s padding-left ease-in-out;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     padding-left: 0;
   }
 
@@ -24,9 +24,9 @@ export const MainContainer = styled.div<MainTemplateStylesProps>`
 `;
 
 export const ContentViewContainer = styled.div`
+  overflow-y: auto;
   @media (min-width: 1700px) {
     flex-grow: 1;
     max-width: 1200px;
-    overflow-y: auto;
   }
 `;
