@@ -1,27 +1,56 @@
-# React + TypeScript + Vite
+# Índice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [Título e Logo](#sobre)
+- [Objetivo do projeto](#objetivo-do-projeto)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Como rodar o projeto localmente](#como-rodar-o-projeto-localmente)
 
-Currently, two official plugins are available:
+# Sobre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+My Collection é um projeto com uma tela de login, uma tela home onde são listados jogos de vídeo game e uma tela de detalhes sobre algum jogo quando é clicado.
 
-## Expanding the ESLint configuration
+# Objetivo do projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O projeto My Collection tem como objetivo demonstrar minhas seguintes habilidades no Front-End:
 
-- Configure the top-level `parserOptions` property like this:
+- Domínio de HTML, Javascript, Typescript, CSS e React
+- Design responsivo
+- Criação de rotas para páginas que detalham um jogo de acordo com seu id
+- Consumo de API utilizando Axios
+- Componentização em React
+- Uso e criação de Hooks customizados
+- Uso da biblioteca Styled Components
+- Criação de estilo global
+- Validação de formulário no momento de realizar o login
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+# Tecnologias utilizadas
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- HTML
+- CSS
+- JavaScript
+- Typescript
+- React
+- React Router Dom
+- Axios
+- Styled Components
+- React Spinners
+- Js Cookie,
+- Json Server
+
+# Como rodar o projeto localmente
+
+1. Clone o repositório
+
+`git clone git@github.com:fernandoluckesi/my-collection.git ou https://github.com/fernandoluckesi/my-collection.git`
+
+2. Instale as dependências de desenvolvimento
+
+`npm install` ou `yarn`
+
+3. Para rodar o Front-end execute:
+
+`npm start` ou `yarn start`
+
+4. Abra outro terminal e ainda na raiz do projeto execute o seguinte comando para poder rodar o Back-end com a simulação de um banco de dados realizado com o json-server:
+
+`json-server --watch db.json`
