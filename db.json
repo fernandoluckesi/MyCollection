@@ -36,109 +36,116 @@
       "token": ""
     }
   ],
-  "games": {
-    "highlights": [
-      {
-        "id": 0,
-        "name": "Ori and Blind Forest",
-        "description": "Ori and the Blind Forest é um jogo eletrônico de aventura em plataforma desenvolvido pela Moon Studios e publicado pela Microsoft Studios para Xbox One e Windows 10 no dia 11 de março de 2015. No dia 27 de Setembro de 2019, também foi lançado",
-        "type": "Aventura",
-        "routeType": "aventura",
-        "price": 36.99,
-        "imageurl": "https://img.ibxk.com.br/2015/03/10/10181820829216.jpg?ims=328x"
-      },
-      {
-        "id": 7,
-        "name": "Among Us",
-        "description": "Among Us é um jogo de dedução social desenvolvido pela InnerSloth. Lançado em 2018, os jogadores trabalham em equipe para identificar impostores em uma nave espacial.",
-        "type": "Ação",
-        "routeType": "acao",
-        "price": 4.99,
-        "imageurl": "https://criticalhits.com.br/wp-content/uploads/2021/07/Among-Us-conhec%CC%A7a-o-jogo-que-conquistou-os-adolescentes_.jpg"
-      },
-      {
-        "id": 8,
-        "name": "The Legend of Zelda: Breath of the Wild",
-        "description": "The Legend of Zelda: Breath of the Wild é um jogo de ação e aventura da Nintendo. Lançado em 2017, segue as aventuras de Link em um mundo aberto vasto.",
-        "type": "Aventura",
-        "routeType": "aventura",
-        "price": 49.99,
-        "imageurl": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58"
-      },
-      {
-        "id": 9,
-        "name": "Valorant",
-        "description": "Valorant é um jogo de tiro em primeira pessoa desenvolvido pela Riot Games. Lançado em 2020, combina elementos de tiro tático e habilidades especiais.",
-        "type": "Tiro",
-        "routeType": "tiro",
-        "price": 80.0,
-        "imageurl": "https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2021/06/vavab9.jpg?fit=1280%2C720&ssl=1"
-      },
-      {
-        "id": 10,
-        "name": "Animal Crossing: New Horizons",
-        "description": "Animal Crossing: New Horizons é um jogo de simulação da Nintendo. Lançado em 2020, os jogadores constroem suas ilhas e interagem com os habitantes animais.",
-        "type": "Simulação",
-        "routeType": "simulacao",
-        "price": 49.99,
-        "imageurl": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a"
-      }
-    ],
-    "bestSellers": [
-      {
-        "id": 1,
-        "name": "The Witcher 3: Wild Hunt",
-        "description": "The Witcher 3: Wild Hunt é um RPG de ação desenvolvido pela CD Projekt Red. Lançado em 2015, o jogo é ambientado em um mundo de fantasia e segue as aventuras de Geralt de Rivia.",
-        "type": "RPG",
-        "routeType": "rpg",
-        "price": 49.99,
-        "imageurl": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000033071/3f7ee6aa3482b514bd443e116022b038a9728f017916ed37da3f09f731a7d5f2"
-      },
-      {
-        "id": 2,
-        "name": "Grand Theft Auto V",
-        "description": "Grand Theft Auto V é um jogo de ação e aventura desenvolvido pela Rockstar North. Lançado em 2013, o jogo se passa na fictícia cidade de Los Santos.",
-        "type": "Ação",
-        "routeType": "acao",
-        "price": 29.99,
-        "imageurl": "https://maisplay.com/wp-content/uploads/2023/03/a-historia-completa-de-gta-v-resumida-1320x742.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Minecraft",
-        "description": "Minecraft é um jogo sandbox desenvolvido pela Mojang Studios. Lançado em 2011, permite aos jogadores construir e explorar mundos feitos de blocos.",
-        "type": "Sandbox",
-        "routeType": "sandbox",
-        "price": 19.99,
-        "imageurl": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f"
-      },
-      {
-        "id": 4,
-        "name": "Red Dead Redemption 2",
-        "description": "Red Dead Redemption 2 é um jogo de ação e aventura da Rockstar Games. Lançado em 2018, se passa no Velho Oeste e segue a história de Arthur Morgan.",
-        "type": "Ação",
-        "routeType": "acao",
-        "price": 59.99,
-        "imageurl": "https://compass-ssl.xbox.com/assets/64/02/6402981a-9446-46d8-8289-e370f3158746.jpg?n=Red-Dead-Redemption-II_GLP-Page-Hero-1084_1920x1080.jpg"
-      },
-      {
-        "id": 5,
-        "name": "FIFA 22",
-        "description": "FIFA 22 é um jogo de simulação de futebol desenvolvido pela EA Sports. Lançado em 2021, apresenta melhorias nas mecânicas de jogo e modos de carreira.",
-        "type": "Esporte",
-        "routeType": "esporte",
-        "price": 49.99,
-        "imageurl": "https://www.fifa-infinity.com/wp-content/uploads/2021/06/fifa22-leaks.jpg"
-      },
-      {
-        "id": 6,
-        "name": "Cyberpunk 2077",
-        "description": "Cyberpunk 2077 é um RPG de mundo aberto da CD Projekt Red. Lançado em 2020, se passa em uma futurística cidade de Night City.",
-        "type": "RPG",
-        "routeType": "rpg",
-        "price": 39.99,
-        "imageurl": "https://image.api.playstation.com/vulcan/ap/rnd/202111/3013/bxSj4jO0KBqUgAbH3zuNjCje.jpg"
-      }
-    ]
-  }
+  "games": [
+    {
+      "id": 0,
+      "name": "Ori and Blind Forest",
+      "description": "Ori and the Blind Forest é um jogo eletrônico de aventura em plataforma desenvolvido pela Moon Studios e publicado pela Microsoft Studios para Xbox One e Windows 10 no dia 11 de março de 2015. No dia 27 de Setembro de 2019, também foi lançado",
+      "type": "Aventura",
+      "routeType": "aventura",
+      "price": 36.99,
+      "imageurl": "https://img.ibxk.com.br/2015/03/10/10181820829216.jpg?ims=328x",
+      "marketType": "highlights"
+    },
+    {
+      "id": 7,
+      "name": "Among Us",
+      "description": "Among Us é um jogo de dedução social desenvolvido pela InnerSloth. Lançado em 2018, os jogadores trabalham em equipe para identificar impostores em uma nave espacial.",
+      "type": "Ação",
+      "routeType": "acao",
+      "price": 4.99,
+      "imageurl": "https://criticalhits.com.br/wp-content/uploads/2021/07/Among-Us-conhec%CC%A7a-o-jogo-que-conquistou-os-adolescentes_.jpg",
+      "marketType": "highlights"
+    },
+    {
+      "id": 8,
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "description": "The Legend of Zelda: Breath of the Wild é um jogo de ação e aventura da Nintendo. Lançado em 2017, segue as aventuras de Link em um mundo aberto vasto.",
+      "type": "Aventura",
+      "routeType": "aventura",
+      "price": 49.99,
+      "imageurl": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58",
+      "marketType": "highlights"
+    },
+    {
+      "id": 9,
+      "name": "Valorant",
+      "description": "Valorant é um jogo de tiro em primeira pessoa desenvolvido pela Riot Games. Lançado em 2020, combina elementos de tiro tático e habilidades especiais.",
+      "type": "Tiro",
+      "routeType": "tiro",
+      "price": 80.0,
+      "imageurl": "https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2021/06/vavab9.jpg?fit=1280%2C720&ssl=1",
+      "marketType": "highlights"
+    },
+    {
+      "id": 10,
+      "name": "Animal Crossing: New Horizons",
+      "description": "Animal Crossing: New Horizons é um jogo de simulação da Nintendo. Lançado em 2020, os jogadores constroem suas ilhas e interagem com os habitantes animais.",
+      "type": "Simulação",
+      "routeType": "simulacao",
+      "price": 49.99,
+      "imageurl": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a",
+      "marketType": "highlights"
+    },
+    {
+      "id": 1,
+      "name": "The Witcher 3: Wild Hunt",
+      "description": "The Witcher 3: Wild Hunt é um RPG de ação desenvolvido pela CD Projekt Red. Lançado em 2015, o jogo é ambientado em um mundo de fantasia e segue as aventuras de Geralt de Rivia.",
+      "type": "RPG",
+      "routeType": "rpg",
+      "price": 49.99,
+      "imageurl": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000033071/3f7ee6aa3482b514bd443e116022b038a9728f017916ed37da3f09f731a7d5f2",
+      "marketType": "bestSellers"
+    },
+    {
+      "id": 2,
+      "name": "Grand Theft Auto V",
+      "description": "Grand Theft Auto V é um jogo de ação e aventura desenvolvido pela Rockstar North. Lançado em 2013, o jogo se passa na fictícia cidade de Los Santos.",
+      "type": "Ação",
+      "routeType": "acao",
+      "price": 29.99,
+      "imageurl": "https://maisplay.com/wp-content/uploads/2023/03/a-historia-completa-de-gta-v-resumida-1320x742.jpg",
+      "marketType": "bestSellers"
+    },
+    {
+      "id": 3,
+      "name": "Minecraft",
+      "description": "Minecraft é um jogo sandbox desenvolvido pela Mojang Studios. Lançado em 2011, permite aos jogadores construir e explorar mundos feitos de blocos.",
+      "type": "Sandbox",
+      "routeType": "sandbox",
+      "price": 19.99,
+      "imageurl": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f",
+      "marketType": "bestSellers"
+    },
+    {
+      "id": 4,
+      "name": "Red Dead Redemption 2",
+      "description": "Red Dead Redemption 2 é um jogo de ação e aventura da Rockstar Games. Lançado em 2018, se passa no Velho Oeste e segue a história de Arthur Morgan.",
+      "type": "Ação",
+      "routeType": "acao",
+      "price": 59.99,
+      "imageurl": "https://compass-ssl.xbox.com/assets/64/02/6402981a-9446-46d8-8289-e370f3158746.jpg?n=Red-Dead-Redemption-II_GLP-Page-Hero-1084_1920x1080.jpg",
+      "marketType": "bestSellers"
+    },
+    {
+      "id": 5,
+      "name": "FIFA 22",
+      "description": "FIFA 22 é um jogo de simulação de futebol desenvolvido pela EA Sports. Lançado em 2021, apresenta melhorias nas mecânicas de jogo e modos de carreira.",
+      "type": "Esporte",
+      "routeType": "esporte",
+      "price": 49.99,
+      "imageurl": "https://www.fifa-infinity.com/wp-content/uploads/2021/06/fifa22-leaks.jpg",
+      "marketType": "bestSellers"
+    },
+    {
+      "id": 6,
+      "name": "Cyberpunk 2077",
+      "description": "Cyberpunk 2077 é um RPG de mundo aberto da CD Projekt Red. Lançado em 2020, se passa em uma futurística cidade de Night City.",
+      "type": "RPG",
+      "routeType": "rpg",
+      "price": 39.99,
+      "imageurl": "https://image.api.playstation.com/vulcan/ap/rnd/202111/3013/bxSj4jO0KBqUgAbH3zuNjCje.jpg",
+      "marketType": "bestSellers"
+    }
+  ]
 }

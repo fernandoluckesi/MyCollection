@@ -17,24 +17,14 @@ import { IoIosArrowBack } from "react-icons/io/";
 import { theme } from "../../global/styles/theme";
 import { Loading } from "../../components/Loading";
 import { GameCard } from "../../components/GameCard";
-import { useGames } from "../../hooks/useGames";
-
-interface GameType {
-  id: number;
-  name: string;
-  description: string;
-  type: string;
-  routeType: string;
-  price: number;
-  imageurl: string;
-}
+import { GameType, useGames } from "../../hooks/useGames";
 
 export const Home: React.FC = () => {
   const { notRenderHome } = useAuthentication(false);
   const HighlightsCarouselRef = useRef<HTMLDivElement | null>(null);
   const [widthScreen, setWidthScreen] = useState<number | undefined>();
 
-  const { isLoading, highlights, bestSellers } = useGames();
+  const { isLoading, games } = useGames(null);
 
   const updateWidthScreen = () => {
     setWidthScreen(window.innerWidth);
@@ -87,18 +77,19 @@ export const Home: React.FC = () => {
           </SectionTitleContainer>
           <HighlightsContainer>
             <HighlightsCarousel ref={HighlightsCarouselRef}>
-              {highlights &&
-                highlights.map((game: GameType) => {
-                  return (
-                    <GameCard
-                      key={game.id}
-                      id={game.id}
-                      name={game.name}
-                      price={game.price}
-                      imageurl={game.imageurl}
-                      inCarousel={true}
-                    />
-                  );
+              {games &&
+                games.map((game: GameType) => {
+                  if (game.marketType === "highlights")
+                    return (
+                      <GameCard
+                        key={game.id}
+                        id={game.id}
+                        name={game.name}
+                        price={game.price}
+                        imageurl={game.imageurl}
+                        inCarousel={true}
+                      />
+                    );
                 })}
             </HighlightsCarousel>
             <LeftScrollButton onClick={scrollLeft}>
@@ -113,18 +104,19 @@ export const Home: React.FC = () => {
             <hr className="line" />
           </SectionTitleContainer>
           <BestSellersContainer>
-            {bestSellers &&
-              bestSellers.map((game: GameType) => {
-                return (
-                  <GameCard
-                    key={game.id}
-                    id={game.id}
-                    name={game.name}
-                    price={game.price}
-                    imageurl={game.imageurl}
-                    inCarousel={false}
-                  />
-                );
+            {games &&
+              games.map((game: GameType) => {
+                if (game.marketType === "bestSellers")
+                  return (
+                    <GameCard
+                      key={game.id}
+                      id={game.id}
+                      name={game.name}
+                      price={game.price}
+                      imageurl={game.imageurl}
+                      inCarousel={false}
+                    />
+                  );
               })}
           </BestSellersContainer>
         </MainContainer>

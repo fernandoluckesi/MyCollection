@@ -26,6 +26,7 @@ export const GameImage = styled.div<{ imageurl: string }>`
   .name {
     color: ${({ theme }) => theme.colors.textLight};
     font-size: 30px;
+    text-shadow: 1px 1px 2px black;
     text-transform: uppercase;
 
     @media (max-width: 700px) {

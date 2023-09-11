@@ -44,3 +44,18 @@ export const getAllGames = async () => {
     throw error;
   }
 };
+
+export const getGameById = async (id: number) => {
+  try {
+    const reponse = await api.get(`/games`, {
+      params: {
+        id,
+      },
+    });
+
+    const user = reponse.data[0];
+    return user;
+  } catch (error) {
+    throw error;
+  }
+};
