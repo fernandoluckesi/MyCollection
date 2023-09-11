@@ -20,7 +20,7 @@ export const getUser = async (email: string, password: string) => {
   }
 };
 
-export const getUserByToken = async (token: string) => {
+export const getUserByToken = async (token: string | undefined) => {
   try {
     const reponse = await api.get(`/users`, {
       params: {
@@ -30,6 +30,16 @@ export const getUserByToken = async (token: string) => {
 
     const user = reponse.data[0];
     return user;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getAllGames = async () => {
+  try {
+    const reponse = await api.get(`/games`);
+    const games = reponse.data;
+    return games;
   } catch (error) {
     throw error;
   }

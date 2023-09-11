@@ -17,16 +17,21 @@ import { useNavigate } from "react-router-dom";
 import { api, getUser } from "../../services/api";
 import Cookies from "js-cookie";
 import { generateRandomToken } from "../../utils/generateRandomToken";
+import { useAuthentication } from "../../hooks/useAuthentication";
+import { Loading } from "../../components/Loading";
 
 export const Login: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [emailChangedAfterBlur, setEmailChangedAfterBlur] = useState(false);
-  const [passwordError, setPasswordError] = useState("");
-  const [loginErrorMessage, setLoginErrorMessage] = useState("");
-  const [buttonSubmitDisabled, setButtonSubmitDisabled] = useState(true);
-  const [saveLoginChecked, setSaveLoginChecked] = useState(false);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [emailChangedAfterBlur, setEmailChangedAfterBlur] =
+    useState<boolean>(false);
+  const [passwordError, setPasswordError] = useState<string>("");
+  const [loginErrorMessage, setLoginErrorMessage] = useState<string>("");
+  const [buttonSubmitDisabled, setButtonSubmitDisabled] =
+    useState<boolean>(true);
+  const [saveLoginChecked, setSaveLoginChecked] = useState<boolean>(false);
+  const [isLoadingLogin, setIsLoadingLogin] = useState(false);
 
   const validateEmail = (value: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -71,20 +76,22 @@ export const Login: React.FC = () => {
 
   const handleOnClickLogin = async (event: React.MouseEvent) => {
     event.preventDefault();
+    setIsLoadingLogin(true);
     try {
       const user = await getUser(email, password);
       if (user) {
         setLoginErrorMessage("");
+        setIsLoadingLogin(false);
 
         const token: string = generateRandomToken(32);
 
         await api.patch(`/users/${user.id}`, { token });
 
         if (saveLoginChecked) {
-          const expirationDate = new Date("9999-12-31T23:59:59");
+          const expirationDate: Date = new Date("9999-12-31T23:59:59");
           Cookies.set("token", token, { expires: expirationDate });
         } else {
-          Cookies.set("token", token, { expires: 0 });
+          Cookies.set("token", token);
         }
 
         navigate("/home");
@@ -97,6 +104,14 @@ export const Login: React.FC = () => {
       console.error("Erro ao fazer login:", error);
     }
   };
+
+  const isLoginScreen = true;
+
+  const { notRenderLogin } = useAuthentication(isLoginScreen);
+
+  if (notRenderLogin) {
+    return null;
+  }
 
   return (
     <MainContainer>
@@ -135,7 +150,7 @@ export const Login: React.FC = () => {
             onClick={handleOnClickLogin}
             disabled={buttonSubmitDisabled}
           >
-            ENTRAR
+            {isLoadingLogin ? <Loading inButton /> : "ENTRAR"}
           </ButtonSubmit>
         </Form>
         <StayLoggedInContainer>

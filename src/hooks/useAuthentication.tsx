@@ -6,11 +6,15 @@ import { getUserByToken } from "../services/api";
 interface AuthenticationData {
   isAuthenticated: string | undefined;
   userId: number | null;
-  isLoading: boolean;
+  notRenderHome: boolean;
+  notRenderLogin: boolean;
 }
 
-export const useAuthentication = (): AuthenticationData => {
-  const [isLoading, setIsLoading] = useState(true);
+export const useAuthentication = (
+  isLoginScreen: boolean
+): AuthenticationData => {
+  const [notRenderHome, setNotRenderHome] = useState<boolean>(true);
+  const [notRenderLogin, setNotRenderLogin] = useState<boolean>(true);
   const [userId, setUserId] = useState<number | null>(null);
 
   const isAuthenticated = (): string | undefined => {
@@ -22,15 +26,25 @@ export const useAuthentication = (): AuthenticationData => {
 
   useEffect(() => {
     const token = isAuthenticated();
-    if (!token) {
-      navigate("/login");
-    } else {
-      getUserByToken(token).then((user) => {
+
+    getUserByToken(token).then((user) => {
+      if (!user || !token) {
+        setNotRenderLogin(false);
+        navigate("/login");
+      } else if (isLoginScreen && user) {
+        setNotRenderHome(false);
+        navigate("/home");
+      } else {
         setUserId(user.id);
-        setIsLoading(false);
-      });
-    }
+        setNotRenderHome(false);
+      }
+    });
   }, []);
 
-  return { isAuthenticated: isAuthenticated(), userId, isLoading };
+  return {
+    isAuthenticated: isAuthenticated(),
+    userId,
+    notRenderHome,
+    notRenderLogin,
+  };
 };

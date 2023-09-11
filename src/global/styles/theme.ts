@@ -10,6 +10,7 @@ export const theme = {
     inative: "#3D5470",
     alert: "#EC6868",
     gray: "#F4F4F4",
+    blueDark: "#15202E",
   },
   fontFamily: "Inter, sans-serif",
 };
